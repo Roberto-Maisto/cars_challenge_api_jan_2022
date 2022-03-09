@@ -20,7 +20,9 @@ Bundler.require(*Rails.groups)
 
 module CarsChallengeApiJan2022
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
+    initializer(:remove_activestorage_routes, after: :add_routing_paths) do |app|
+      app.routes_reloader.paths.delete_if { |path| path =~ /activestorage|actionmailbox/ }
+    end
     config.load_defaults 7.0
     config.api_only = true
 

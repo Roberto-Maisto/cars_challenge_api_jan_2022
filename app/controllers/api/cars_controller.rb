@@ -3,4 +3,8 @@ class Api::CarsController < ApplicationController
     cars = Car.all
     render json: { cars: cars }
   end
+
+  def create
+    binding.pry
+  end
 end
