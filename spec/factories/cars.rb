@@ -3,7 +3,7 @@ FactoryBot.define do
     brand { 'MyString' }
     model { 'MyString' }
     colour { 'MyString' }
-    year { 1 }
-    price { 1.5 }
+    year { 2012 }
+    price { 50.000 }
   end
 end

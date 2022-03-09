@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_08_155351) do
     t.string "model"
     t.string "colour"
     t.integer "year"
-    t.float "price"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
